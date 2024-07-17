@@ -23,3 +23,18 @@ const slides = [
 ];
 
 console.log(slides);
+
+
+// imposto l'istanza Vue
+const { createApp } = Vue;
+
+createApp({
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+
+    }
+}).mount('#app')
