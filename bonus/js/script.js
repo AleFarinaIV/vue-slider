@@ -32,6 +32,9 @@ createApp({
             active_element: 0,
         }
     },
+    created() {
+        this.autoPlay();
+    },
     methods: {
         // funzione per la slide successiva
         next() {
@@ -55,6 +58,13 @@ createApp({
         thumbClick(index) {
             this.active_element = index;
             console.log('thumb clicked', index);
-        }
+        },
+
+        // funzione per l'autoplay delle slide, ogni 3 secondi cambia automaticamente
+        autoPlay() {
+            setInterval(() => {
+                this.next();
+            }, 3000);
+        },
     }
 }).mount('#app')
