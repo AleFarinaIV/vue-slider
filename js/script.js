@@ -40,6 +40,15 @@ createApp({
             }else {
                 this.active_element++;
             }
+        },
+
+        // funzione per la slide precedente
+        prev() {
+            if (this.active_element == 0) {
+                this.active_element = this.slides.length - 1;
+            } else {
+                this.active_element--;
+            }
         }
     }
 }).mount('#app')
