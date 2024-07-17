@@ -30,6 +30,7 @@ createApp({
             ],
             // counter per la slide iniziale
             active_element: 0,
+            autothumb: undefined,
         }
     },
     created() {
@@ -62,9 +63,13 @@ createApp({
 
         // funzione per l'autoplay delle slide, ogni 3 secondi cambia automaticamente
         autoPlay() {
-            setInterval(() => {
+            this.autothumb = setInterval(() => {
                 this.next();
             }, 3000);
         },
+
+        stopAutoPlay() {
+            clearInterval(this.autothumb);
+        }
     }
 }).mount('#app')
