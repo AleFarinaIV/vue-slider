@@ -33,6 +33,13 @@ createApp({
         }
     },
     methods: {
-
+        // funzione per la slide successiva
+        next() {
+            if (this.active_element == this.slides.length - 1) {
+                this.active_element = 0;
+            }else {
+                this.active_element++;
+            }
+        }
     }
 }).mount('#app')
